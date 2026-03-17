@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body style="font-family: Arial; margin: 40px;">
+
+    <h2>Registration Form</h2>
+
+    <form action="welcome.html" method="POST">
+
+        <!-- Name -->
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" placeholder="Enter password" minlength="4" maxlength="10" required>
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- Hobbies -->
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="h1">
+        <label for="h1">Reading</label>
+
+        <input type="checkbox" id="h2">
+        <label for="h2">Sports</label>
+
+        <input type="checkbox" id="h3">
+        <label for="h3">Music</label>
+        <br><br>
+
+        <!-- Age -->
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" placeholder="Enter age" min="10" max="60" required>
+        <br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #a8e063, #56ab2f);
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: green;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+
+        .btn {
+            background: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: darkgreen;
+        }
+
+        fieldset {
+            border: 2px solid green;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<form action="stdreg.html" method="POST">
+
+    <h1>Student Registration</h1>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="name">Student Name:</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+
+        <label for="pwd">Password:</label>
+        <input id="pwd" type="password" minlength="3" maxlength="8" required>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Enter email" required>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" required> Male
+        <input type="radio" name="gender"> Female
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" min="4" max="25" required>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Details</legend>
+
+        <label>Mobile Number:</label>
+        <input type="tel" pattern="[0-9]{10}" placeholder="10-digit number" required>
+
+        <label>Address:</label>
+        <textarea rows="3" placeholder="Enter address"></textarea>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Course Details</legend>
+
+        <label>Select Course:</label>
+        <select>
+            <option>--Select--</option>
+            <option>BCA</option>
+            <option>MCA</option>
+            <option>B.Sc</option>
+            <option>B.Tech</option>
+        </select>
+
+        <label>Skills:</label><br>
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JavaScript
+
+    </fieldset>
+
+    <input type="submit" value="Register" class="btn">
+    <input type="reset" value="Clear" class="btn">
+
+</form>
+
+</div>
+
+</body>
+</html>
