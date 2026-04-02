@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Piece Crew</title>
+    <style>
+        body {
+            background-image: url('background.jpg'); /* Use the image name you uploaded */
+            background-size: cover; /* Full screen */
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: safe;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #boat {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white box */
+            border: 2px solid #00796b;
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            text-align: center;
+            color: #00796b;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        ul li {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="boat">
+    <h2>Straw Hat Crew Members</h2>
+    <ul id="crew">
+        <li>Monkey D. Luffy</li>
+        <li>Roronoa Zoro</li>
+        <li>Nami</li>
+        <li>Usopp</li>
+        <li>Sanji</li>
+        <li>Tony Tony Chopper</li>
+        <li>Nico Robin</li>
+        <li>Franky</li>
+        <li>Brook</li>
+        <li>Jinbe</li>
+    </ul>
+
+    <button onclick="showRoute('nami')">Ask Nami</button>
+    <button onclick="showRoute('robin')">Ask Robin</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    function showRoute(name) {
+        if (name === "robin") {
+            document.getElementById("result").innerText = "Robin says: Explore the Hidden Library route";
+        } 
+        else if (name === "nami") {
+            document.getElementById("result").innerText = "Nami says: Navigate using the Weather route";
+        }
+    }
+</script>
+
+</body>
+</html>

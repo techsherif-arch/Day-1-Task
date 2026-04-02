@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of the Week</title>
+    <style>
+        body {
+            background-color: #99cbf7;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #f9a9a9;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: 02#5a9bd4;
+        }
+        p {
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Day of the Week</h2>
+        <input type="number" id="day" placeholder="Enter 1 to 7">
+        <button onclick="showDay()">Show Day</button>
+        <p id="dayResult"></p>
+    </div>
+
+    <script>
+        function showDay() {
+            let d = document.getElementById("day").value;
+            if (d === "") {
+                alert("Please enter a day number (1 to 7).");
+                return;
+            }
+            d = parseInt(d);
+            switch (d) {
+                case 1:
+                    document.getElementById("dayResult").innerText = "Sunday";
+                    break;
+                case 2:
+                    document.getElementById("dayResult").innerText = "Monday";
+                    break;
+                case 3:
+                    document.getElementById("dayResult").innerText = "Tuesday";
+                    break;
+                case 4:
+                    document.getElementById("dayResult").innerText = "Wednesday";
+                    break;
+                case 5:
+                    document.getElementById("dayResult").innerText = "Thursday";
+                    break;
+                case 6:
+                    document.getElementById("dayResult").innerText = "Friday";
+                    break;
+                case 7:
+                    document.getElementById("dayResult").innerText = "Saturday";
+                    break;
+                default:
+                    document.getElementById("dayResult").innerText = "Invalid Input";
+            }
+        }
+    </script>
+
+</body>
+</html>

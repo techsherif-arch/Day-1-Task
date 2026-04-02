@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Number</title>
+    <style>
+        body {
+            background-color: #92c3ef;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fcb6b6;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color:black;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #5a9bd4;
+        }
+        p {
+            text-align: center;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Check Number</h2>
+        <input type="number" id="num" placeholder="Enter a number">
+        <button onclick="checkNumber()">Check</button>
+        <p id="numberResult"></p>
+    </div>
+
+    <script>
+        function checkNumber() {
+            let n = document.getElementById("num").value;
+            if (n === "") {
+                alert("Please enter a number.");
+                return;
+            }
+            n = parseFloat(n);
+            if (n > 0) {
+                document.getElementById("numberResult").innerText = "Positive Number";
+            } else if (n < 0) {
+                document.getElementById("numberResult").innerText = "Negative Number";
+            } else {
+                document.getElementById("numberResult").innerText = "Zero";
+            }
+        }
+    </script>
+
+</body>
+</html>
